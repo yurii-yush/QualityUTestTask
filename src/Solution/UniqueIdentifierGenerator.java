@@ -41,16 +41,16 @@ public class UniqueIdentifierGenerator {
         }
 
         String[] arr = query.split("\\.");
-        int fromIdentifier = 0;
+        int fromIdentifier = 0, toIdentifier = 0;
         int questionId = Integer.parseInt(arr[0]);
-        int toIdentifier = (questionId + 1) * questionTypeIdentifierRange;
-
         if (arr.length == 1) {
             fromIdentifier = questionId * questionTypeIdentifierRange;
+            toIdentifier = (questionId + 1) * questionTypeIdentifierRange;
         }
         if (arr.length == 2) {
             int categoryId = Integer.parseInt(arr[1]);
             fromIdentifier = (questionId * questionTypeIdentifierRange) + (categoryId * questionCategoryIdentifierRange);
+            toIdentifier = fromIdentifier + 9;
         }
         if (arr.length == 3) {
             int categoryId = Integer.parseInt(arr[1]);

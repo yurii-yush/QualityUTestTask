@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 
     In conclusion, time-complexity for each query is O(n) - it happens in the worst scenario when all lines have the same service and category or when we use * *  in the query
 
-    Alternative way to implement is using arrays, eg [1][3] for service and [5][7][2] for questions
+    Alternative way to implement is using arrays, eg [1][3] for service and [5][7][2] for questions.
  */
 public class FileParser {
 
